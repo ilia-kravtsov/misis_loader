@@ -1,0 +1,107 @@
+.page {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100dvh;
+}
+
+:root {
+  --ring-width: 15px;
+  --ring-color: rgb(44, 165, 252);
+  --ring-size: 150px;
+}
+
+.loader2 {
+  position: relative;
+  width: var(--ring-size);
+  height: var(--ring-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.outer-ring {
+  position: absolute;
+  width: 82%;
+  height: 82%;
+  border: var(--ring-width) solid transparent;
+  border-right-color: var(--ring-color);
+  border-bottom-color: var(--ring-color);
+  border-radius: 50%;
+  animation: rotate 3s linear infinite;
+}
+
+.middle-ring {
+  position: absolute;
+  width: 58%;
+  height: 58%;
+  border: var(--ring-width) solid transparent;
+  border-right-color: var(--ring-color);
+  border-bottom-color: var(--ring-color);
+  border-radius: 50%;
+  animation: rotate 2.5s linear infinite reverse;
+}
+
+.inner-ring {
+  position: absolute;
+  width: 34%;
+  height: 34%;
+  border: 15px solid transparent;
+  border-bottom-color: var(--ring-color);
+  border-right-color: var(--ring-color);
+  border-left-color: var(--ring-color);
+  border-radius: 50%;
+  animation: rotate 2s linear infinite;
+}
+
+.core2 {
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  background-color: var(--ring-color);
+  border-radius: 50%;
+}
+
+.loader {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.outer-wrapper,
+.middle-wrapper,
+.inner-wrapper,
+.core-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.outer {
+  animation: rotate 4s linear infinite;
+}
+
+.middle {
+  animation: rotate 3s linear infinite reverse;
+}
+
+.inner {
+  animation: rotate 2s linear infinite;
+}
+
+.core1 {
+  animation: rotate 3s linear infinite reverse;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
