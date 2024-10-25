@@ -8,9 +8,9 @@
   align-items: center;
   flex-wrap: wrap;
   min-height: 100dvh;
-  width: 100vw;
   padding: 40px 20px;
   overflow-x: hidden;
+  margin: 0;
 }
 
 :root {
