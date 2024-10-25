@@ -3,18 +3,21 @@
 .page {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  height: 100dvh;
+  min-height: 100dvh;
   width: 100vw;
   overflow: hidden;
+  padding-top: 60px;
 }
 
 :root {
   --ring-width: 15px;
   --ring-color: rgb(44, 165, 252);
   --ring-size: 150px;
+  --ring-shadow: rgba(44, 165, 252, 0.5); 
 }
 
 .loader2 {
@@ -68,3 +71,57 @@
   border-radius: 50%;
 }
 
+.loader3 {
+  position: relative;
+  width: var(--ring-size);
+  height: var(--ring-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.outer-ring3,
+.middle-ring3,
+.inner-ring3 {
+  position: absolute;
+  border: var(--ring-width) solid transparent;
+  border-radius: 50%;
+}
+
+.outer-ring3 {
+  width: 82%;
+  height: 82%;
+  border-right-color: var(--ring-color);
+  border-bottom-color: var(--ring-color);
+  box-shadow: 3px 3px 8px var(--ring-shadow); 
+  animation: rotate 3s linear infinite;
+}
+
+.middle-ring3 {
+  width: 58%;
+  height: 58%;
+  border-right-color: var(--ring-color);
+  border-bottom-color: var(--ring-color);
+  box-shadow: 3px 3px 8px var(--ring-shadow);
+  animation: rotate 2.5s linear infinite reverse;
+}
+
+.inner-ring3 {
+  width: 34%;
+  height: 34%;
+  border: var(--ring-width) solid transparent;
+  border-bottom-color: var(--ring-color);
+  border-right-color: var(--ring-color);
+  border-left-color: var(--ring-color);
+  box-shadow: 3px 3px 8px var(--ring-shadow);
+  animation: rotate 2s linear infinite;
+}
+
+.core3 {
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  background-color: var(--ring-color);
+  border-radius: 50%;
+  box-shadow: 0px 0px 8px var(--ring-shadow); 
+}
