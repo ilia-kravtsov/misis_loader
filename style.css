@@ -9,8 +9,8 @@
   flex-wrap: wrap;
   min-height: 100dvh;
   width: 100vw;
-  overflow: hidden;
-  padding: 60px 20px;
+  padding: 40px 20px;
+  overflow-x: hidden;
 }
 
 :root {
